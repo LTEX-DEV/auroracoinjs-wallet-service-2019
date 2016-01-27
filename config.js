@@ -38,7 +38,7 @@ var config = {
   blockchainExplorerOpts: {
     livenet: {
       provider: 'insight',
-      url: 'https://insight.bitpay.com:443',
+      url: 'https://digiexplorer.info:443',
     },
     testnet: {
       provider: 'insight',
