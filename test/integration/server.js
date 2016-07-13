@@ -2962,9 +2962,11 @@ describe('Wallet service', function() {
   });
 
   describe('#createTx backoff time', function(done) {
-    var server, wallet, txid;
+    var server, wallet, txid, clock;
+    var _oldBackoffOffset = Defaults.BACKOFF_OFFSET;
 
     beforeEach(function(done) {
+      Defaults.BACKOFF_OFFSET = 3;
       helpers.createAndJoinWallet(2, 2, function(s, w) {
         server = s;
         wallet = w;
@@ -2973,8 +2975,14 @@ describe('Wallet service', function() {
         });
       });
     });
+      afterEach(function(done) {
+         Defaults.BACKOFF_OFFSET = _oldBackoffOffset;
+         clock.restore();
+         done();
+       });
 
     it('should follow backoff time after consecutive rejections', function(done) {
+      clock = sinon.useFakeTimers(Date.now(), 'Date');
       async.series([
 
         function(next) {
