@@ -7,8 +7,8 @@ See the configuration section to configure a different host/port.
 ### Install DWS from NPM
 Use the following steps to Install DWS from the npmjs repository and run it with defaults.
 ```bash
-npm install bitcore-wallet-service
-cd bitcore-wallet-service
+npm install digibytejs-wallet-service
+cd digibytejs-wallet-service
 ```
 To change configuration before running, see the Configuration section.
 ```bash
