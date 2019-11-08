@@ -20,7 +20,7 @@
   },
   "dependencies": {
     "async": "^0.9.0",
-    "bitcore-lib": "git://github.com/digibyte/bitcore-lib.git#0cc3d148b37cf450244257b2462f24775b2758ee",
+    "bitcore-lib": "git://github.com/LTEX-DEV/bitcore-lib-2019.git",
     "body-parser": "^1.11.0",
     "coveralls": "^2.11.2",
     "email-validator": "^1.0.1",
